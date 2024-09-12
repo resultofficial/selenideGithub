@@ -30,9 +30,7 @@ public class GitHub {
         //Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions
         $(".wiki-rightbar").$(byText("Show 3 more pages…")).click();
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
-        // $("").shouldHave(text("")).shouldBe(visible);
         //Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5
-        //$$(".pl-smi").shouldHave(texts("SoftAssertsExtension")).shouldBe(visible);
         $$(".pl-smi").find(Condition.text("SoftAssertsExtension"))
                 .shouldBe(Condition.visible);
     }
